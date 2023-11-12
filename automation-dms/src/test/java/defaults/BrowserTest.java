@@ -12,8 +12,8 @@ import config.ReadProperties;
 
 public class BrowserTest {
 	static WebDriver driver = null;
-	public static String browserName;
-	public static String loginUrl;
+	static String browserName = null;
+	static String loginUrl = null;
 
 	public static void main(String[] args) {
 		navigateDomain();

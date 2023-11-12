@@ -14,9 +14,9 @@ import java.util.Properties;
 
 public class ReadProperties {
 	static Properties prop = null;
-	static String projectPath = System.getProperty("user.dir");
+	static String projectPath = "C:/Users/Dell/git/LMD-testing-selenium/automation-dms/src/test/java/config/";
 	static String propertyName = null;
-	
+
 	//This is constructor to pass properties file name during object creation
 	@SuppressWarnings("static-access")
 	public ReadProperties(String propertyName) {
@@ -27,7 +27,7 @@ public class ReadProperties {
 	public static void loadProperty() {
 		prop = new Properties();
 		try {
-			InputStream input = new FileInputStream("C:/Users/Dell/eclipse-workspace/automation-dms/src/test/java/Config/"+propertyName+".properties");
+			InputStream input = new FileInputStream(projectPath+propertyName+".properties");
 			try {
 				prop.load(input);
 			} catch (IOException e) {
