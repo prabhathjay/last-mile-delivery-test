@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import config.ReadProperties;
 
 public class LoginApplication {
-	static ReadProperties config = new ReadProperties("config");
+	static ReadProperties config = new ReadProperties("config2");
 	static HashMap<String, String> props = config.getPropertyAsHashMap();
 	
 	//need to declare username and password properties in config.properties file

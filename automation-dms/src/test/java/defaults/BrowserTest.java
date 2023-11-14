@@ -20,7 +20,7 @@ public class BrowserTest {
 	}
 
 	public static void navigateDomain() {
-		ReadProperties rp = new ReadProperties("config");
+		ReadProperties rp = new ReadProperties("config2");
 		HashMap<String, String> hs = rp.getPropertyAsHashMap();
 		browserName = hs.get("browser");
 		trackingHistory = hs.get("trackingHistory");
