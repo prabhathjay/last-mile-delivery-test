@@ -13,7 +13,7 @@ import config.ReadProperties;
 public class BrowserTest {
 	static WebDriver driver = null;
 	static String browserName = null;
-	static String loginUrl = null;
+	static String trackingHistory = null;
 
 	public static void main(String[] args) {
 		navigateDomain();
@@ -23,7 +23,7 @@ public class BrowserTest {
 		ReadProperties rp = new ReadProperties("config");
 		HashMap<String, String> hs = rp.getPropertyAsHashMap();
 		browserName = hs.get("browser");
-		loginUrl = hs.get("loginUrl");
+		trackingHistory = hs.get("trackingHistory");
 
 		if(browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -37,7 +37,7 @@ public class BrowserTest {
 					driver = new InternetExplorerDriver();
 				}
 
-		driver.get(loginUrl);
+		driver.get(trackingHistory);
 		System.out.println("Navigated to DMS login page..");
 //		try {
 //			Thread.sleep(2000);
