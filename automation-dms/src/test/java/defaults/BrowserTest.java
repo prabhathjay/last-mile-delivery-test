@@ -11,7 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import config.ReadProperties;
 
 public class BrowserTest {
-	static WebDriver driver = null;
+	public static WebDriver driver = null;
 	static String browserName = null;
 	static String trackingHistory = null;
 
@@ -38,7 +38,8 @@ public class BrowserTest {
 				}
 
 		driver.get(trackingHistory);
-		System.out.println("Navigated to DMS login page..");
+//		System.out.println("Navigated to DMS login page..");
+//		--------------------------------------------------
 //		try {
 //			Thread.sleep(2000);
 //			System.out.println("Waiting for 2sec before browser exit..");
