@@ -2,7 +2,9 @@ package utils;
 
 import java.util.HashMap;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -30,13 +32,19 @@ public class ReadExcelData {
 			Thread.sleep(2000);
 
 			BrowserTest.driver.findElement(By.xpath("//button[contains(.,'Review')]")).click();
-			BrowserTest.driver.findElement(By.xpath("//div[@id='return-request-review-modal']/form/div/div/div[3]/button[3]")).click();
+			Thread.sleep(1000);
+			BrowserTest.driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[3]/form[1]/div[1]/div[1]/div[3]/button[3]")).click();
+			Thread.sleep(1000);
 			
+			//To handle alert message
+			Alert confirmAlert = BrowserTest.driver.switchTo().alert();
+			confirmAlert.dismiss();
+			BrowserTest.driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[3]/form[1]/div[1]/div[1]/div[3]/button[1]")).click();
+			Thread.sleep(1000);
 			BrowserTest.driver.close();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	
